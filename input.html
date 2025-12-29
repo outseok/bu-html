@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<body>
+    <form action="process_test.php" method="post">
+        <label>ID : <input type="text" name="username" placeholder="id를 입력하세요" required autofocus></label>
+        <br>
+        <label>PW : <input type="password" name="password" required></label>
+        <br>
+        <input type="submit" value="회원가입">
+        <br>
+
+        <label> 몸무게 : <input type = "text" name="weight" placeholder="몸무게를 입력하세요" required autofocus></label>
+        <br>
+        <label> 키 : <input type = "text" name="height" placeholder="키를 입력하세요" required autofocus></label>
+        <br>
+        <label> 나이 : <input type = "number" name="age" placeholder="나이를 입력하세요" required autofocus number></label>
+        <br>
+        <label> 만족도 <input type = 'range' name="satisfaction" min="0" max="100" step="10"></label>
+        <input type="submit" value="입력완료">
+        </form>
+        
+</body>
+</html>
