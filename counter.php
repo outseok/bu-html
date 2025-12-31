@@ -7,13 +7,20 @@
     <title>카운터</title>
 </head>
 <body>
+    
     <?php
-    $fp=fopen("record.txt","r+");
-    $fget=fgets($fp,4096);
-    echo "총 방문자 수는 ".$fget."명 입니다.<br>";
-    $fget++;
+    $ip=$_SERVER['REMOTE_ADDR'];
+    date_default_timezone_set('Asia/Seoul');
+    $time=date("Y-m-d H:i:s");
+
+    $fp=fopen("record.txt","a+");
+    
+    fwrite($fp,"IP 주소는 ".$ip." 입니다.<br>접속한 시각은 ".$time." 입니다.<br>$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
     fseek($fp,0);
-    fwrite($fp,"$fget");
+    while(!feof($fp)){
+        $temp = fgetc($fp);
+        echo $temp;
+    }
     fclose($fp);
     ?>
 </body>
