@@ -6,6 +6,11 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <a href="search.php">주소록 검색하기</a>
+    
+    </a>
+    <br><br>
+
     <h1>주소록 입력하기</h1>
     <form action ="process1.php" method="post">
         이름: <input type="text" name="name"><br>
