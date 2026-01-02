@@ -33,6 +33,7 @@
             <td colspan="2"> <center> <input type="submit" value="회원가입"></center></td>
         </tr>
     </table>
+    <h4>이미 회원이신가요? <a href="login.php"> 로그인</a></h4>
     </form>
 </body>
 

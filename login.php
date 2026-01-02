@@ -22,6 +22,7 @@
             <td colspan="2"> <center> <input type="submit" value="로그인"></center></td>
         </tr>
     </table>
+    <h4>아직 회원이 아니신가요? <a href="join.php">회원가입</a></h4>
     </form>
 </body>
 </html>
