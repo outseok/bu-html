@@ -5,21 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Java Example</title>
     <script>
+        function check() {
+            switch(f1.name.value) {
+                case 'garen':
+                    f1.address.value = '데마시아';
+                    break;
+                case 'yasuo':
+                    f1.address.value = '아이오니아';
+                    break;
+                case 'Taric':
+                    f1.address.value = '타곤';
+                    break;
+                default:
+                    alert('챔피언을 선택해주세요.');
+
+            }
+        }
     </script>
 </head>
 <body>
-    <script>
-        let seat = new Array()
-        document.write("<table border='1' width='300'>");
-        for (let i=0; i<50; i++) {
-            document.write("<td>" + (seat[i] = i+1) + "</td>"); 
-            if ((i+1) % 10 == 0) {
-                document.write("<tr><br></tr>");
+    <form action = './process.php' method = 'post' name = 'f1' onChange = 'check()'>
+        <select name='name'>
+        <option value = 'none'>챔피언 선택</option>
+            <option value = 'garen'>가렌</option>
+            <option value = 'yasuo'>야스오</option>
+            <option value = 'Taric'>타릭</option>
+        </select>
+        <input type = 'text' name = 'address'>
+
+
+    </form>
                 
-            }
-        }
-        document.write("</table>");
-    </script>
+    
 </body>
 
 </html>
